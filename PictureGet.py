@@ -23,6 +23,7 @@ def craw(url, page):
         imageurl = "http://" + imageurl
         try:
             urllib.request.urlretrieve(imageurl, filename=imagename)
+            print('{} success!'.format(imagename))
         except error.URLError as e:
             """
               引发URLError异常有四种
